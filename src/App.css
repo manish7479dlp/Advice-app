@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.5) , rgba(0,0,0,0.5)), url("./Image/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+    width: 47%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(135, 202, 231, 0.701);
+    border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content {
+    height: 70%;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.content h3 {
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+    background-color: rgb(30, 78, 78);
+    border: none;
+    border-radius: 24px;
+    padding: 8px 12px;
+    font-weight: bold;
+    color: rgb(252, 177, 86);
+    transition:.3s
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(60, 60, 150, 0.879);
+    color:sandybrown
+}
+
+/* Responsive code start */
+
+@media screen and (max-width : 1130px){
+    .card {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width : 1000px){
+    .card {
+        width: 78vw;
+    }
+}
+
+@media screen and (max-width : 750px){
+    .card  {
+        width: 80vw;
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width : 400px){
+    .card {
+        height : 50vh;
+    }
+    .card content h3{
+        font-size: 15px;
+        font-weight: 400;
+
+    }
 }
